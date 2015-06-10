@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+.menu-bottom{
+	color: black;
+}
+.items-menu i{
+	font-size: 1.6em
+}
+.box{
+	height: 450px;
+	background: blue;
+}
+
+.requisitos img{
+	width: 100%;
+	margin-left: 15%;
+}
+
+.titulo-req{
+	font-size: 1.7em;
+	text-align: center;
+}
+.titulo-agent{
+	font-size: 1.7em;
+	text-align: center;
+	margin-bottom: 15px !important;
+	margin-top: 0px !important;
+}
+.descripcion-req{
+	text-align: justify !important;
+}
+.card-agentes div{
+	margin-bottom: -10px;
+	margin-top: -20px;
+}
+textarea{
+	resize: none;
+}
+a{
+	text-decoration: none;
+}
+.categorias i{
+	font-size: 4em;
+}
+.categorias div{
+	color: black;
+}
