@@ -44,3 +44,6 @@ a{
 .categorias div{
 	color: black;
 }
+.full-image{
+	border-radius: 0px !important;
+}

@@ -46,6 +46,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.lista', {
+    url: "/lista",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/listacasas.html"
+      }
+    }
+  })
+
   .state('app.contacto', {
     url: "/contacto",
     views: {
