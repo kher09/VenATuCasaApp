@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'angularUtils.directives.dirPagination'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -37,20 +37,31 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.requisitos', {
-    url: "/requisitos",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/requisitos.html"
+  .state('app.venatucasa', {
+      url: "/venatucasa",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/inicio.html",
+          controller: 'VistaInicio'
+        }
       }
-    }
-  })
+    })
 
   .state('app.lista', {
     url: "/lista",
     views: {
       'menuContent': {
-        templateUrl: "templates/listacasas.html"
+        templateUrl: "templates/listacasas.html",
+        controller: 'ListaPropiedades'
+      }
+    }
+  })
+
+  .state('app.requisitos', {
+    url: "/requisitos",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/requisitos.html"
       }
     }
   })
@@ -63,15 +74,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-    .state('app.venatucasa', {
-      url: "/venatucasa",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/inicio.html",
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
 
   .state('app.single', {
     url: "/playlists/:playlistId",
