@@ -47,28 +47,19 @@ a{
 .full-image{
 	border-radius: 0px !important;
 }
-
-.my-controller {
-  border: 1px solid #fcc;
-  padding: 5px;
-  margin: 3px;
+.slider {
+	text-align: center;
 }
-.my-controller small {
-  color: #c99;
+.scroll {
+	height: 100%;
 }
-.other-controller {
-  border: 1px solid #ccf;
-  padding: 5px;
-  margin: 3px;
+a {
+	text-decoration: none !important;
 }
-.other-controller small {
-  color: #99c;
+.texto-propiedades{
+	text-align: justify;
+	margin: 1em;
 }
-.third-controller {
-  border: 1px solid #cfc;
-  padding: 5px;
-  margin: 3px;
-}
-.third-controller small {
-  color: #9c9;
+.texto-propiedades h2{
+	text-align: center;
 }

@@ -50,6 +50,7 @@ angular.module('starter.controllers', [])
     $timeout(function() {
       $scope.closeLogin();
     }, 1000);
+
   };
 })
 
@@ -103,10 +104,65 @@ angular.module('starter.controllers', [])
   ];
 
 })
-.controller ('OtherController', function($scope) {
+.controller ('Paginacion', function($scope) {
   $scope.pageChangeHandler = function(num) {
   };
 })
+
+.controller('DetallesPropiedad', function($scope, $ionicSlideBoxDelegate, $ionicModal) {
+
+  $scope.Imagenes = [{
+        'src' : 'img/casa1.jpg', 
+        'msg' : ''
+      }, {
+        'src' : 'img/casa2.jpg', 
+        'msg' : ''
+      }, { 
+        'src' : 'img/casa3.jpg', 
+        'msg' : ''
+    }];
+
+  $scope.navSlide = function(index) {
+        $ionicSlideBoxDelegate.slide(index, 500);
+    }
+
+  $ionicModal.fromTemplateUrl('image-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+ 
+    $scope.openModal = function() {
+      $scope.modal.show();
+      // Important: This line is needed to update the current ion-slide's width
+      // Try commenting this line, click the button and see what happens
+      $ionicSlideBoxDelegate.update();
+    };
+ 
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+ 
+    // Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
+    // Execute action on hide modal
+    $scope.$on('modal.hide', function() {
+      // Execute action
+    });
+    // Execute action on remove modal
+    $scope.$on('modal.removed', function() {
+      // Execute action
+    });
+    $scope.$on('modal.shown', function() {
+      console.log('Modal is shown!');
+    });
+
+})
+
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
   $scope.canciones = [
     { title: 'Passenger - Let her go', id: 1 },
