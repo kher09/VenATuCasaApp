@@ -1,1 +1,130 @@
-style.styl
+letras = white
+letrashov = #1ddfb3
+backmenu = black
+titulcolor = #004b79
+verde = #2a5934
+
+
+@font-face {
+    font-family: fuenteprimary;
+    src: url('../fonts/SourceSansPro-Regular.ttf');    
+}
+@font-face {
+    font-family: titulos;
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');    
+}
+
+
+body
+    background-color #f2f2f2
+    color #797979
+    font-family fuenteprimary
+
+.menu-bottom
+    color black
+
+.items-menu
+    i
+        font-size 1.6em
+
+.box
+    height 450px
+    background blue
+
+.requisitos
+    img
+        width 100%
+        margin-left 15%
+
+.titulo-req
+    font-size 1.7em
+    text-align center
+
+.titulo-agent
+    font-size 1.7em
+    margin-bottom 15px 
+    margin-top 0px
+    text-align center
+
+.descripcion-req
+    text-align justify 
+
+.card-agentes
+    div
+        margin-bottom -10px
+        margin-top -20px
+
+textarea
+    resize none
+
+a
+    text-decoration none  
+    &:hover
+        text-decoration none
+
+.categorias
+    i
+        font-size 4em
+    div
+        color black
+
+.full-image
+    border-radius 0px 
+
+.slider
+    text-align center
+
+.scroll
+    height 100%
+
+.texto-propiedades
+    text-align justify
+    margin 1em
+    h2
+        text-align center
+        color verde
+        font-family titulos
+    ul
+        padding 0 1.2em
+        li
+            list-style initial   
+            color titulcolor 
+        
+/* HEADER */
+
+.bar-assertive 
+    background-color rgba(backmenu, .4) !important    
+    font-family titulos  
+    text-transform uppercase
+    
+
+ /* PROPIEDADES */
+    
+.card
+    background-color #f2f2f2
+    box-shadow none
+    margin 0
+     
+ .propiedades
+     .item        
+        height 340px
+        padding 0 
+        .cuadro
+            background-color white
+            box-shadow 0 0 3px 1px rgba(verde,0.5)
+            padding 10px 0
+            img
+                height 220px
+                width 100%
+            h2
+                color titulcolor 
+                font-size 17px
+                font-weight bold 
+            .precio
+                color verde
+                font-size 17px   
+.titul-casa
+    color verde    
+    font-family titulos  
+    margin 1em 0
+    text-decoration underline 

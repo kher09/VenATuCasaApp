@@ -1,20 +1,22 @@
 <style>
-	 .slider { text-align: center }
-  .scroll { height: 100% }
+	.slider { text-align: center }
+	.scroll { height: 100% }
 </style>
 <ion-view view-title="Casas en venta">
   <ion-content>
    		<div class="list">
-	    	<div class="card">
+	    	<div class="card propiedades">
 		    	<div dir-paginate="propiedad in propiedades | itemsPerPage: 10" current-page="currentPage" class="item item-text-wrap">
-		    		<a href="#/app/detallepropiedad">
-		    			<img class="full-image" src="{{propiedad.imagen}}">
-						<div class="text-center">
-							<h2>{{propiedad.titulo}} ({{propiedad.codigo}})</h2>
-							<p>{{propiedad.info}}</p>
-							<p>{{propiedad.precio}}</p>
-						</div>
-		    		</a>
+		    		<div class="cuadro">
+			    		<a href="#/app/detallepropiedad">
+			    			<img class="full-image" src="{{propiedad.imagen}}">
+							<div class="text-center">
+								<h2>{{propiedad.titulo}} <br> ({{propiedad.codigo}})</h2>
+								<p>{{propiedad.info}}</p>
+								<p class="precio">{{propiedad.precio}}</p>
+							</div>
+			    		</a>
+		    		</div>	
 				</div>
 				<div class="text-center">
 					<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="lib/angular-utils-pagination/dirPagination.tpl.html">
