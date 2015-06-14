@@ -103,7 +103,9 @@ angular.module('starter.controllers', [])
     { imagen: 'img/casa11.jpg', titulo: 'Colegio Americano' , codigo: 'ACR002', info: '0 vrs² / 0 mt² / 3 H / 3B / 2 VEH', descripcion:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et saepe, architecto ipsa ad magni dolor mollitia doloremque. Magnam aspernatur vitae maiores hic voluptatum fugit reprehenderit commodi, maxime sit! Atque, error?', precio:'U$150,000.00'}
   ];
 
+
 })
+
 .controller ('Paginacion', function($scope) {
   $scope.pageChangeHandler = function(num) {
   };
